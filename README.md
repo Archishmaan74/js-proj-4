@@ -28,10 +28,4 @@ This is a simple **Number Guessing Game** built with HTML, CSS, and JavaScript. 
     ```bash
     git clone https://github.com/yourusername/number-guessing-game.git
     ```
-
-2. Navigate to the project directory:
-    ```bash
-    cd number-guessing-game
-    ```
-
-3. Open the `index.html` file in your browser to play the game.
+2. Open the `index.html` file in your browser to play the game.
