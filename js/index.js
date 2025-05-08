@@ -53,6 +53,11 @@ const checkGuess = (guess) => {
   }
 };
 
-const displayGuess = () => {};
+const displayGuess = (guess) => {
+  guessField.value = "";
+  previousGuess.innerHTML += `${guess}`;
+  attemptedGuess++;
+  remGuesses.innerHTML = `${11 - attemptedGuess}`;
+};
 
 const displayMessage = () => {};
