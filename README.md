@@ -29,3 +29,11 @@ This is a simple **Number Guessing Game** built with HTML, CSS, and JavaScript. 
     git clone https://github.com/yourusername/number-guessing-game.git
     ```
 2. Open the `index.html` file in your browser to play the game.
+
+## Screenshots:
+
+![GN_1_](https://github.com/user-attachments/assets/73a517c3-ca20-47f3-9028-4a3fa5e7c348)
+![GN_2](https://github.com/user-attachments/assets/8a485134-8790-4e04-a22f-78852d2e4b63)
+![GN_3](https://github.com/user-attachments/assets/8cd09316-42d4-4741-803f-857828fa3c8e)
+![GN_4](https://github.com/user-attachments/assets/90c85128-413c-4257-90c4-d5157cfcb6c7)
+
