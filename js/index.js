@@ -42,8 +42,17 @@ const vaildateGuess = (guess) => {
   }
 };
 
+const checkGuess = (guess) => {
+  if (guess === randomNumber) {
+    displayMessage(`You guessed it correctly! Good job!`);
+    endGame();
+  } else if (guess < randomNumber) {
+    displayMessage(`Number is TOOOO low!`);
+  } else if (guess > randomNumber) {
+    displayMessage(`Number is TOOOO high!`);
+  }
+};
+
 const displayGuess = () => {};
 
 const displayMessage = () => {};
-
-const checkGuess = () => {};
