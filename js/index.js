@@ -1,4 +1,4 @@
-const randomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1);
 console.log(randomNumber);
 
 const guessField = document.querySelector(".guessField");
@@ -23,7 +23,7 @@ if (playGame) {
 }
 
 const vaildateGuess = (guess) => {
-  if (isNan(guess)) {
+  if (isNaN(guess)) {
     alert(`Please enter a valid input!`);
   } else if (guess < 1) {
     alert(`Please enter value more than 1!`);
@@ -31,7 +31,7 @@ const vaildateGuess = (guess) => {
     alert(`Please enter value less than 100!`);
   } else {
     prevGuess.push(guess);
-    if (attemptedGuess > 10) {
+    if (attemptedGuess >= 10) {
       displayGuess(guess);
       displayMessage(`Game Over! Random number was ${randomNumber}`);
       endGame();
@@ -55,9 +55,37 @@ const checkGuess = (guess) => {
 
 const displayGuess = (guess) => {
   guessField.value = "";
-  previousGuess.innerHTML += `${guess}`;
+  previousGuess.innerHTML += `${guess}, `;
   attemptedGuess++;
   remGuesses.innerHTML = `${11 - attemptedGuess}`;
 };
 
-const displayMessage = () => {};
+const displayMessage = (message) => {
+  lowOrHi.innerHTML = `<h2>${message}</h2>`;
+};
+
+const endGame = () => {
+  guessField.value = "";
+  guessField.setAttribute("disabled", "");
+  p.classList.add("button");
+  p.innerHTML = `<h2 id="newGame">Start New Game</h2>`;
+  startOver.appendChild(p);
+  playGame = false;
+  newGame();
+};
+
+const newGame = () => {
+  const newGameButton = document.querySelector("#newGame");
+  newGameButton.addEventListener("click", (e) => {
+    randomNumber = parseInt(Math.random() * 100 + 1);
+    console.log(randomNumber);
+    prevGuess = [];
+    attemptedGuess = 1;
+    previousGuess.innerHTML = "";
+    remGuesses.innerHTML = `${11 - attemptedGuess}`;
+    guessField.removeAttribute("disabled");
+    startOver.removeChild(p);
+    lowOrHi.innerHTML = "";
+    playGame = true;
+  });
+};
