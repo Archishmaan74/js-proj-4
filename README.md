@@ -1,5 +1,7 @@
 # Number Guessing Game
 
+Hosted URL: https://archishmaan74.github.io/js-proj-4/
+
 This is a simple **Number Guessing Game** built with HTML, CSS, and JavaScript. The game challenges the player to guess a random number between 1 and 100, with a maximum of 10 attempts. After the game ends, the player has the option to start a new game.
 
 ## Features
